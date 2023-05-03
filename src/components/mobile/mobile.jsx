@@ -1,6 +1,5 @@
 import React from "react";
-import Example from "../tab/navbar/sidebar";
-// import { AiOutlineSearch } from "react-icons/ai";
+import Sidebar from "./sidebar";
 
 const mobile = () => {
   return (
@@ -29,7 +28,7 @@ const mobile = () => {
               ></input>
             </form>
             <li className="nav-item mt-2 me-5">
-              <Example />
+              <Sidebar />
             </li>
           </ul>
         </div>

@@ -4,6 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { Button } from "react-bootstrap";
 
 function OffCanvasExample({ name, ...props }) {
   const [show, setShow] = useState(false);
@@ -13,7 +14,7 @@ function OffCanvasExample({ name, ...props }) {
 
   return (
     <>
-      <div variant="primary" onClick={handleShow} className="sidebar me-2">
+      <div variant="primary" onClick={handleShow} className="sidebar me-5">
         {<AiOutlineMenu style={{ height: "30px", width: "24px" }} />}
       </div>
       <Offcanvas show={show} onHide={handleClose} {...props}>
@@ -24,29 +25,47 @@ function OffCanvasExample({ name, ...props }) {
                 src="infosec.png"
                 alt="Logo"
                 className=" align-item-center"
-                style={{ height: "60px", width: "150px" }}
+                // style={{ height: "60px", width: "150px" }}
               />
             </a>
           </Offcanvas.Title>
         </Offcanvas.Header>
-        <div class="list-group list-group-flush">
+        <div className="list-group list-group-flush">
           <a
             href="#"
-            class="list-group-item list-group-item-action active"
+            className="list-group-item list-group-item-action active"
             aria-current="true"
           >
             Home
           </a>
-          <a href="#" class="list-group-item list-group-item-action">
+          <a href="#" className="list-group-item list-group-item-action">
             Browse jobs
           </a>
-          <a href="#" class="list-group-item list-group-item-action">
+          <a href="#" className="list-group-item list-group-item-action">
             Browse Candidates
           </a>
-          <a href="#" class="list-group-item list-group-item-action">
+          <a href="#" className="list-group-item list-group-item-action">
             For Jobseekers
           </a>
-          <a class="list-group-item list-group-item-action ">For Recruiters</a>
+          <a className="list-group-item list-group-item-action ">
+            For Recruiters
+          </a>
+        </div>
+        <div>
+          <Offcanvas.Footer classname="d-flex ">
+            <li className="list-group-item me-5 mt-5 col-md-6">
+              <a href="#login" style={{ textDecoration: "none" }}>
+                Register
+              </a>
+            </li>
+          </Offcanvas.Footer>
+          {/* <Offcanvas.Footer> */}
+          {/* <li className="list-group-item mt-5 ms-5 col-md-6 ">
+              <a href="#login" style={{ textDecoration: "none" }}> */}
+          {/* Login */}
+          {/* </a>
+            </li> */}
+          {/* </Offcanvas.Footer> */}
         </div>
       </Offcanvas>
     </>

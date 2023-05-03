@@ -1,6 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
 
-body,
-html {
-  font-family: "Open Sans", sans-serif;
+body {
+  font-size: 16px !important; /* default font size */
 }
+
+.btn {
+  font-size: 1rem !important;
+  padding: 0.5rem 1rem !important;
+}
+
+@media screen and (max-width: 1408px) {
+  /* adjust font size for small screens */
+  body {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 1345px) {
+  /* adjust font size for extra small screens */
+  body {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 1276px) {
+  adjust font size for extra small screens body {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 1273px) {
+  */
+/*adjust font size for extra small screens */
+ body {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 12px) {
+  /* adjust font size for extra small screens */
+  body {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn {
+    font-size: 0.8rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+}
+
+/* Smaller button size for screens smaller than 576px */
+/* @media screen and (max-width: 576px) {
+} */
+
+/* @media only screen and (max-width: 992px) {
+  .insideLoginButtonContainer {
+    position: fixed;
+    bottom: 10px;
+    width: 335px;
+    margin: 0 auto;
+  }
+  .insideLoginButtonContainer :global(.btn-outline-primary) {
+    border: 0;
+    color: black;
+  }
+  .insideLoginButtonContainer :global(.btn-primary) {
+    background: transparent;
+    color: blue;
+    border: 0;
+    border-left: 2px solid #2121211C;
+    border-radius: 0;
+  }
+}
+@media only screen and (max-width: 296px) {
+  .insideLoginButtonContainer {
+    position: fixed;
+    bottom: 10px;
+    width: 280px;
+    margin: 0 auto;
+  }
+}  */
