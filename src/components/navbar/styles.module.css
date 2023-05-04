@@ -1,18 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,500;1,700&display=swap");
-
-.container-fluid {
-  font-family: "Open Sans", sans-serif;
-}
-
-/* .nav-item {
-  margin-left: 31px;
-  margin-right: 45px;
-} */
-/* 
-.nav {
-  font-size: clamp(1rem, 2vw + 0.75rem, 1.5rem);
-}  */
-
 @media only screen and (max-width: 992px) {
   .insideLoginButtonContainer {
     position: fixed;

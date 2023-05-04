@@ -25,7 +25,6 @@ function OffCanvasExample({ name, ...props }) {
                 src="infosec.png"
                 alt="Logo"
                 className=" align-item-center"
-                // style={{ height: "60px", width: "150px" }}
               />
             </a>
           </Offcanvas.Title>
@@ -59,13 +58,6 @@ function OffCanvasExample({ name, ...props }) {
               </a>
             </li>
           </Offcanvas.Footer>
-          {/* <Offcanvas.Footer> */}
-          {/* <li className="list-group-item mt-5 ms-5 col-md-6 ">
-              <a href="#login" style={{ textDecoration: "none" }}> */}
-          {/* Login */}
-          {/* </a>
-            </li> */}
-          {/* </Offcanvas.Footer> */}
         </div>
       </Offcanvas>
     </>

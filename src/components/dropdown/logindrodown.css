@@ -1,0 +1,17 @@
+.vl {
+  border-left: 1px solid #ccc;
+  height: 400px;
+  position: absolute;
+  left: 70%;
+  margin-left: -3px;
+  top: 30%;
+}
+
+.row {
+  margin-top: 73px;
+  margin-left: 139px;
+  margin-right: 139px;
+  width: 1162.26px;
+  height: 609.22px;
+  top: 103px;
+}

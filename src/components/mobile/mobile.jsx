@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "./sidebar";
+//import Sidebar from "../navbar/mobilesidebar";
 
 const mobile = () => {
   return (
@@ -27,9 +27,7 @@ const mobile = () => {
                 aria-label="Search"
               ></input>
             </form>
-            <li className="nav-item mt-2 me-5">
-              <Sidebar />
-            </li>
+            <li className="nav-item mt-2 me-5">{/* <Sidebar /> */}</li>
           </ul>
         </div>
       </div>

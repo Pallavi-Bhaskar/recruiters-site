@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "./sidebar";
+import Sidebar from "../../navbar/tabsidebar";
 import Button from "react-bootstrap/Button";
 
 const Navbar = () => {

@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 
-import "./styles.navbar.css";
+import "./styles.module.css";
 import { Button } from "react-bootstrap";
-import Sidebar from "../tab/navbar/sidebar";
+import Sidebar from "./tabsidebar";
+import Login from "../dropdown/logindropdown";
+import "./navbar.css";
 
 const navbar = () => {
   return (
     <div className="mypage">
       <nav className="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light d-flex">
         <div className="container-fluid  justify-content-between">
-          <a className="navbar-brand ms-5" href="#">
+          <a className="navbar-brand ms-4" href="#">
             <img
               src="infosec.png"
               alt="Logo"
@@ -47,18 +49,16 @@ const navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="d-flex  ">
-            <a className="nav-link me-5 ms-5 d-none d-sm-block m-auto">
-              <button type="button" className="btn btn-primary bton">
+          <div className="d-flex ">
+            <Login />
+            <a className="nav-link d-none d-sm-block m-auto me-5">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+              >
                 Register
-              </button>
-            </a>
-            <a
-              className=" nav-link d-none d-sm-block m-auto me-5"
-              style={{ margin: "auto 60px auto auto" }}
-            >
-              <button type="button" className="btn btn-outline-primary bton ">
-                Login
               </button>
             </a>
           </div>
