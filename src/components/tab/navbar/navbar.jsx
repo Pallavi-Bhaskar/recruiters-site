@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../../navbar/tabsidebar";
 import Button from "react-bootstrap/Button";
 
-const Navbar = () => {
+const tabNavbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light ">
       <div className="container-fluid">
@@ -41,4 +41,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default tabNavbar;

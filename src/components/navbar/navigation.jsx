@@ -1,57 +1,60 @@
-import React, { useState } from "react";
+import React from "react";
 
-import "./styles.module.css";
-import { Button } from "react-bootstrap";
 import Sidebar from "./tabsidebar";
 import Login from "../dropdown/logindropdown";
+
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
-const navbar = () => {
+const Navigation = () => {
   return (
     <div className="mypage">
       <nav className="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light d-flex">
         <div className="container-fluid  justify-content-between">
-          <a className="navbar-brand ms-4" href="#">
+          <Link className="navbar-brand ms-4" to="/">
             <img
               src="infosec.png"
               alt="Logo"
               className="d-inline-block align-text-top"
               style={{ height: "60px", width: "150px" }}
             />
-          </a>
+          </Link>
 
           <div className="collapse navbar-collapse j" id="navbarNav">
             <ul className="navbar-nav">
               <li className=" nav-item mt-2  ms-5 me-5">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item mt-2 me-5">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/browsejobs">
                   Browse Jobs
-                </a>
+                </Link>
               </li>
               <li className="nav-item mt-2 me-5">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/browsecandidates">
                   Browse Candidates
-                </a>
+                </Link>
               </li>
               <li className="nav-item mt-2 me-5">
-                <a className="nav-link " href="#">
+                <Link className="nav-link " to="/forjobseekers">
                   For Jobseekers
-                </a>
+                </Link>
               </li>
               <li className="nav-item mt-2 me-5">
-                <a className=" nav-link" href="#">
+                <Link className=" nav-link" to="/forrecruiters">
                   For Recruiters
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div className="d-flex ">
             <Login />
-            <a className="nav-link d-none d-sm-block m-auto me-5">
+            <Link
+              className="nav-link d-none d-lg-block m-auto me-5"
+              to="/register"
+            >
               <button
                 type="button"
                 className="btn btn-primary"
@@ -60,7 +63,7 @@ const navbar = () => {
               >
                 Register
               </button>
-            </a>
+            </Link>
           </div>
           <div className="d-lg-none">
             <Sidebar />
@@ -82,4 +85,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navigation;

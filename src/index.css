@@ -5,8 +5,8 @@
 }
 
 body {
-  font-size: 17px !important;
-  font-family: var(--bs-body-font-family) !important;
+  font-size: 16px !important;
+  font-family: "Open Sans" !important;
 }
 
 /* .btn {
@@ -84,4 +84,8 @@ body {
 .btn-outline-primary {
   --bs-btn-color: #486284;
   --bs-btn-border-color: #486284;
+}
+
+.mypage {
+  overflow: hidden;
 }

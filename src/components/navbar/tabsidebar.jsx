@@ -4,6 +4,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { Col, Row } from "react-bootstrap";
+
+import Login from "../dropdown/logindropdown";
+import { Link } from "react-router-dom";
 
 function OffCanvasExample({ name, ...props }) {
   const [show, setShow] = useState(false);
@@ -47,6 +51,19 @@ function OffCanvasExample({ name, ...props }) {
             For Jobseekers
           </a>
           <a class="list-group-item list-group-item-action ">For Recruiters</a>
+
+          <div
+            className="d-flex"
+            style={{ marginTop: "370px", alignItems: "center" }}
+          >
+            <div style={{ marginLeft: "60px", fontFamily: "Open Sans" }}>
+              <Link to="/mobilelogin"> Login</Link>
+            </div>
+            <div className="v2"></div>
+            <div style={{ marginLeft: "200px", fontFamily: "Open Sans" }}>
+              <Link to="/mobileregister">Register</Link>
+            </div>
+          </div>
         </div>
       </Offcanvas>
     </>
