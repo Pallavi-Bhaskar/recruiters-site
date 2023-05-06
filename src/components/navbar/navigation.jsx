@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <div className="mypage">
       <nav className="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light d-flex">
-        <div className="container-fluid  justify-content-between">
+        <div className="container-fluid justify-content-between">
           <Link className="navbar-brand ms-4" to="/">
             <img
               src="infosec.png"

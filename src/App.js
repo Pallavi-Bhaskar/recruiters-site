@@ -31,6 +31,7 @@ function App() {
         <Route path="/mobileregister" element={<MobileRegister />} />
         <Route path="/mobilelogin" element={<MobileLogin />} />
       </Routes>
+      {/* <Dropdown /> */}
     </div>
   );
 }

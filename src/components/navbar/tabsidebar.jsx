@@ -8,6 +8,7 @@ import { Col, Row } from "react-bootstrap";
 
 import Login from "../dropdown/logindropdown";
 import { Link } from "react-router-dom";
+import styles from "./styles.module.css";
 
 function OffCanvasExample({ name, ...props }) {
   const [show, setShow] = useState(false);
@@ -52,18 +53,27 @@ function OffCanvasExample({ name, ...props }) {
           </a>
           <a class="list-group-item list-group-item-action ">For Recruiters</a>
 
-          <div
-            className="d-flex"
-            style={{ marginTop: "370px", alignItems: "center" }}
-          >
-            <div style={{ marginLeft: "60px", fontFamily: "Open Sans" }}>
-              <Link to="/mobilelogin"> Login</Link>
-            </div>
-            <div className="v2"></div>
-            <div style={{ marginLeft: "200px", fontFamily: "Open Sans" }}>
-              <Link to="/mobileregister">Register</Link>
-            </div>
+          <div className={styles.insideLoginButtonContainer}>
+            <form
+              className="d-flex justify-content-between gap-3"
+              role="search"
+            >
+              <button type="button" class="btn btn-outline-primary w-50">
+                <Link to="/mobilelogin">Login</Link>
+              </button>
+              <a class="btn btn-primary w-50" href="#" role="button">
+                <Link to="/mobileregister">Register</Link>
+              </a>
+            </form>
           </div>
+          {/* <form className="d-lg-flex d-none gap-3" role="search">
+              <button type="button" class="btn btn-outline-primary">
+                Login
+              </button>
+              <a class="btn btn-primary" href="#" role="button">
+                Register
+              </a>
+            </form> */}
         </div>
       </Offcanvas>
     </>

@@ -9,7 +9,7 @@ const dropdown = () => {
       >
         <button
           type="button"
-          className="dropdown-toggle  "
+          className="dropdown-toggle btn btn-outline-primary "
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
@@ -37,4 +37,4 @@ const dropdown = () => {
   );
 };
 export default dropdown;
-//btn btn-outline-primary
+//
