@@ -81,7 +81,8 @@ const mobileLogin = () => {
               <Button
                 variant="primary"
                 type="submit"
-                className="text-center mb-4 vw-100 "
+                className="text-center mb-4  "
+                style={{ width: "100%", marginRight: "20px" }}
               >
                 Sign Up
               </Button>

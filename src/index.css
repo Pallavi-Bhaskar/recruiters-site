@@ -14,18 +14,18 @@ body {
   padding: 0.5rem 1rem !important;
 }  */
 
-@media screen and (max-width: 1408px) {
+@media screen and (max-width: 1416px) {
   /* adjust font size for small screens */
   body {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 
-@media screen and (max-width: 1345px) {
+@media screen and (max-width: 1346px) {
   */
 /* adjust font size for extra small screens */
  body {
-    font-size: 14px !important;
+    font-size: 13px !important;
   }
 }
 

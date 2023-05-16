@@ -288,3 +288,57 @@
 //     </nav>
 //   );
 // }
+// import React from "react";
+
+// const mobiles = () => {
+//   return (
+//     <div>
+//       <div class="container">
+//         <div class="row">
+//           <div class="col-md-6">
+//             <h2>Register</h2>
+//             <form></form>
+//           </div>
+//           <div class="col-md-6">
+//             <h2>Login</h2>
+//             <form></form>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default mobiles;
+
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
+function PasswordInput() {
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  return (
+    <div className="input-group mb-3">
+      <input
+        type={showPassword ? "text" : "password"}
+        className="form-control"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <div className="input-group-append">
+        <span className="input-group-text" onClick={togglePassword}>
+          <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+        </span>
+      </div>
+    </div>
+  );
+}
+
+export default PasswordInput;

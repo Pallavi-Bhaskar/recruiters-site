@@ -1,13 +1,16 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./register.css";
+import PasswordToggle from "../dropdown/password";
+import "../dropdown/logindropdown.css";
 
 const LoginRegister = () => {
+  const [PasswordInputType, ToggleIcon] = PasswordToggle();
   return (
-    <Container style={{ overflow: "hidden" }}>
-      <Row>
+    <Container className="containers" fluid>
+      <Row className="rows">
         {/* This creates a vertical line */}
-        <Col md={8}>
+        <Col xl={8}>
           <h4 className="mb-5">Register today.</h4>
           <Form>
             <div className="d-flex mb-5">
@@ -40,11 +43,14 @@ const LoginRegister = () => {
                 style={{ marginRight: "15px" }}
               >
                 <Form.Label>Password:</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  style={{ width: "350px" }}
-                />
+                <div className="col">
+                  <Form.Control
+                    type={PasswordInputType}
+                    placeholder="Password"
+                    style={{ width: "350px" }}
+                  />
+                  <div className="password-toggle-icon">{ToggleIcon}</div>
+                </div>
               </Form.Group>
 
               <Form.Group
@@ -97,8 +103,8 @@ const LoginRegister = () => {
             </Button>
           </Form>
         </Col>
-        <div className="vl"></div>
-        <Col md={4}>
+        <div className="vl d-lg-block d-none"></div>
+        <Col xl={4} className="d-lg-block d-none">
           <h4>Already Registered ?</h4>
           <h4 className="mb-5">Login to your Account</h4>
           <Form>

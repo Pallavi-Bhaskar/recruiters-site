@@ -1,0 +1,7 @@
+@media screen and (max-width: 276px) {
+  */
+  /* adjust font size for extra small screens */
+    .containers {
+    font-size: 9px !important;
+  }
+}

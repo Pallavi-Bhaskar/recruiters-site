@@ -5,6 +5,7 @@ import Login from "../dropdown/logindropdown";
 
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import Dropdown from "../dropdown/dropdown";
 
 const Navigation = () => {
   return (
@@ -50,7 +51,7 @@ const Navigation = () => {
             </ul>
           </div>
           <div className="d-flex ">
-            <Login />
+            <Dropdown />
             <Link
               className="nav-link d-none d-lg-block m-auto me-5"
               to="/register"

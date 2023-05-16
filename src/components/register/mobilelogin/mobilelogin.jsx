@@ -2,12 +2,16 @@ import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import Navigation from "../../navbar/navigation";
 import { Link } from "react-router-dom";
+import "./mobilelogin.css";
 
 const mobilelogin = () => {
   return (
     <div>
       <Navigation />
-      <Container style={{ overflowX: "hidden", overflowY: "hidden" }}>
+      <Container
+        className="containers"
+        style={{ overflowX: "hidden", overflowY: "hidden" }}
+      >
         <Row>
           <Col>
             <h4 className="text-center">
@@ -43,14 +47,7 @@ const mobilelogin = () => {
                 </Form>
                 <div className="me-1">Forgot Password?</div>
               </div>
-              <Button
-                variant="primary"
-                type="submit"
-                style={{
-                  marginLeft: "20px",
-                }}
-                className="vw-100 text-center"
-              >
+              <Button variant="primary" type="submit" style={{ width: "100%" }}>
                 Login
               </Button>
               <h6 className="text-center mt-2">

@@ -58,22 +58,24 @@ function OffCanvasExample({ name, ...props }) {
               className="d-flex justify-content-between gap-3"
               role="search"
             >
-              <button type="button" class="btn btn-outline-primary w-50">
-                <Link to="/mobilelogin">Login</Link>
-              </button>
-              <a class="btn btn-primary w-50" href="#" role="button">
-                <Link to="/mobileregister">Register</Link>
-              </a>
+              <div class="btn btn-outline-primary w-50">
+                <Link
+                  to="/mobilelogin"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Login
+                </Link>
+              </div>
+              <div class="btn btn-primary w-50" href="#" role="button">
+                <Link
+                  to="/mobileregister"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  Register
+                </Link>
+              </div>
             </form>
           </div>
-          {/* <form className="d-lg-flex d-none gap-3" role="search">
-              <button type="button" class="btn btn-outline-primary">
-                Login
-              </button>
-              <a class="btn btn-primary" href="#" role="button">
-                Register
-              </a>
-            </form> */}
         </div>
       </Offcanvas>
     </>

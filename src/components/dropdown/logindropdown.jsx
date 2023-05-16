@@ -3,10 +3,7 @@ import React from "react";
 const dropdown = () => {
   return (
     <div className="btn-group dropdown">
-      <a
-        className="nav-link me-5 ms-5 d-none d-lg-block m-auto"
-        style={{ margin: "auto 60px auto auto" }}
-      >
+      <a className="nav-link me-5 ms-5 d-none d-lg-block m-auto">
         <button
           type="button"
           className="dropdown-toggle btn btn-outline-primary "
@@ -17,12 +14,12 @@ const dropdown = () => {
         </button>
         <ul className="dropdown-menu">
           <li>
-            <a className="dropdown-item" href="#">
+            <a className="dropdown-item list" href="#">
               Action
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#">
+            <a className="dropdown-item list" href="#">
               Another action
             </a>
           </li>
