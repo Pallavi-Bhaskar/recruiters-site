@@ -1,13 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUserCircle, FaUserEdit, FaFileSignature } from "react-icons/fa";
 import { GrLogout } from "react-icons/gr";
 import { ImProfile } from "react-icons/im";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { GiHandBag } from "react-icons/gi";
 import "./employer.css";
-import EmployerButtons from "./CompanyDetails/employerbuttons";
+import CompanyDetailsButtons from "./CompanyDetails/companyButton";
 
-const employer = () => {
+import AddJobButtons from "./AddJob/addJobButtons";
+import PostJobsButtons from "./Jobs/PostJobsButtons";
+import ViewApplicationButtons from "./Applications/viewApplicationButtons";
+import HiredButtons from "./Applications/hiredButtons";
+import RejectButtons from "./Applications/rejectButton";
+import ShortListedButtons from "./Applications/shortListedButtons";
+import SettingsButtton from "./Settings/settingsButtton";
+
+const Employer = ({ buttonIndex, buttonText, onButtonClick }) => {
+  // const [pageDiv, setPage] = useState();
+  // const [currentPage, setCurrentPage] = useState(null);
+
+  // // const handleClick = (divId) => {
+  // //   setPage(divId);
+  // // };
+  // const changeCurrentPage = (page) => {
+  //   console.log("executed with page,", page);
+  //   setCurrentPage(page);
+  // };
+
+  // let pageContent = null;
+
+  const [activeButton, setActiveButton] = useState(null);
+
+  const handleButtonClick = (button) => {
+    setActiveButton(button);
+  };
+
+  // const [activePage, setActivePage] = useState("about");
+
+  // const handlePageChange = (page) => {
+  //   setActivePage(page);
+  // };
+
+  // if (pageDiv === 1) {
+  //   pageContent = <CompanyDetailsButtons
+  //    pageChange={changeCurrentPage}
+  //    />;}
+  // } else if (pageDiv === 2) {
+  //   pageContent = <AddJobButtons />;
+  // } else if (pageDiv === 3) {
+  //   pageContent = <PostJobsButtons />;
+  // } else if (pageDiv === 4) {
+  //   pageContent = <ViewApplicationButtons />;
+  // } else if (pageDiv === 5) {
+  //   pageContent = <ShortListedButtons />;
+  // } else if (pageDiv === 6) {
+  //   pageContent = <HiredButtons />;
+  // } else if (pageDiv === 7) {
+  //   pageContent = <RejectButtons />;
+  // } else if (pageDiv === 8) {
+  //   pageContent = <SettingsButtton />;
+  // }
+
+  // const [activeButton, setActiveButton] = useState(null);
+  // const [activeNavItem, setActiveNavItem] = useState(null);
+
+  // const handleButtonClick = (buttonIndex) => {
+  //   setActiveButton(buttonIndex);
+  //   setActiveNavItem(null); // Reset active nav item when a different button is clicked
+  // };
+
+  // const handleNavItemClick = (navItemIndex) => {
+  //   setActiveNavItem(navItemIndex);
+  // };
+
   return (
     <div>
       <div className="row mt-5 mb-5">
@@ -35,13 +100,26 @@ const employer = () => {
                   <div>
                     <HiBuildingOffice2 />
                   </div>
-                  <div className="ms-3 fw-bold">Company Details</div>
+                  <a
+                    className="ms-3 fw-bold nav-link"
+                    onClick={() => handleButtonClick("buttonA")}
+                    href="#"
+                  >
+                    Company Details
+                  </a>
                 </p>
-                <p className="card-text me-3 fw-bold d-flex ">
+                <p className="card-text me-3  d-flex ">
                   <div>
                     <FaFileSignature />
                   </div>
-                  <div className="ms-3">Add a Job</div>
+                  <a
+                    className="ms-3 fw-bold nav-link"
+                    // onClick={() => handleClick(2)}
+                    onClick={() => handleButtonClick("buttonB")}
+                    href="#"
+                  >
+                    Add a Job
+                  </a>
                 </p>
                 <p className="card-text me-3 ">
                   <div className="fw-bold d-flex ">
@@ -51,7 +129,15 @@ const employer = () => {
                     <div className="ms-3">Jobs</div>
                   </div>
                   <ul className="employer-ul" style={{ listStyleType: "none" }}>
-                    <li className="mt-1">Posted Jobs</li>
+                    <li
+                      className="mt-1"
+                      //  onClick={() => handleClick(3)}
+                      onClick={() => handleButtonClick("buttonC")}
+                    >
+                      <a className="nav-link" href="#">
+                        Posted Jobs
+                      </a>
+                    </li>
                     <li className="mt-1">Drafts</li>
                     <li className="mt-1">Closed Jobs</li>
                   </ul>
@@ -64,17 +150,57 @@ const employer = () => {
                     <div className="ms-3 fw-bold"> Applications</div>
                   </div>
                   <ul className="employer-ul" style={{ listStyleType: "none" }}>
-                    <li className="mt-1">View Applications</li>
-                    <li className="mt-1">Shortlisted Candidates</li>
-                    <li className="mt-1">Hired Candidates</li>
-                    <li className="mt-1 ">Rejected Candidates</li>
+                    <li
+                      className="mt-1"
+                      //  onClick={() => handleClick(4)}
+                      onClick={() => handleButtonClick("buttonD")}
+                    >
+                      <a className="nav-link" href="#">
+                        View Applications
+                      </a>
+                    </li>
+                    <li
+                      className="mt-1"
+                      // onClick={() => handleClick(5)}
+                      onClick={() => handleButtonClick("buttonE")}
+                    >
+                      <a className="nav-link" href="#">
+                        Shortlisted Candidates
+                      </a>
+                    </li>
+                    <li
+                      className="mt-1"
+                      // onClick={() => handleClick(6)}
+                      onClick={() => handleButtonClick("buttonF")}
+                    >
+                      <a className="nav-link" href="#">
+                        Hired Candidates
+                      </a>
+                    </li>
+                    <li
+                      className="mt-1 "
+                      //  onClick={() => handleClick(7)}
+                      onClick={() => handleButtonClick("buttonG")}
+                    >
+                      <a className="nav-link" href="#">
+                        Rejected Candidates
+                      </a>
+                    </li>
                   </ul>
                 </p>
                 <p className="card-text me-3  d-flex">
                   <div>
                     <FaUserEdit />
                   </div>
-                  <div className="ms-3 fw-bold">Update Profile</div>
+                  <div
+                    className="ms-3 fw-bold"
+                    // onClick={() => handleClick(8)}
+                    onClick={() => handleButtonClick("buttonH")}
+                  >
+                    <a className="nav-link" href="#">
+                      Settings
+                    </a>
+                  </div>
                 </p>
                 <p className="card-text me-3  d-flex">
                   <div>
@@ -96,7 +222,24 @@ const employer = () => {
               border: "none",
             }}
           >
-            <EmployerButtons />
+            {/* {pageContent} */}
+            {/* {currentPage === "about" ? <About /> : ""}
+            {currentPage === "company-details" ? <Contact /> : ""} */}
+            {/* {activeButton === "buttonA" && (
+              <CompanyDetailsButtons
+                activePage={activePage}
+                onPageChange={handlePageChange}
+              />
+            )}*/}
+
+            {activeButton === "buttonA" ? <CompanyDetailsButtons /> : ""}
+            {activeButton === "buttonB" ? <AddJobButtons /> : ""}
+            {activeButton === "buttonC" ? <PostJobsButtons /> : ""}
+            {activeButton === "buttonD" && <ViewApplicationButtons />}
+            {activeButton === "buttonE" && <ShortListedButtons />}
+            {activeButton === "buttonF" && <HiredButtons />}
+            {activeButton === "buttonG" && <RejectButtons />}
+            {activeButton === "buttonH" && <SettingsButtton />}
           </div>
         </div>
         <div className="col-sm-3">
@@ -114,30 +257,8 @@ const employer = () => {
           </div>
         </div>
       </div>
-      <div className="row ">
-        <div className="col-8 text-center">
-          <a className="nav-link  py-5  ">
-            <button
-              type="button"
-              className="btn btn-outline-primary buttonCancel "
-            >
-              Cancel
-            </button>
-          </a>
-        </div>
-        <div className="col-4 ">
-          <a className="nav-link py-5 ">
-            <button
-              type="button"
-              className="btn btn-primary px-4 buttonSave mt-2 "
-            >
-              Save
-            </button>
-          </a>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default employer;
+export default Employer;

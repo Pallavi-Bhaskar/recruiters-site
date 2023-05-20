@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 
-const ReviewSubmit = () => {
-  const [selectedItem, setSelectedItem] = useState("");
+const Screening = () => {
+  const [selectedItem1, setSelectedItem1] = useState("");
 
-  const handleDropdownChange = (event) => {
-    setSelectedItem(event.target.value);
+  const handleDropdownChange1 = (event) => {
+    setSelectedItem1(event.target.value);
+  };
+  const [selectedItem2, setSelectedItem2] = useState("");
+
+  const handleDropdownChange2 = (event) => {
+    setSelectedItem2(event.target.value);
+  };
+
+  const [selectedItem3, setSelectedItem3] = useState("");
+
+  const handleDropdownChange3 = (event) => {
+    setSelectedItem3(event.target.value);
   };
   return (
-    <div className="ms-5 me-5">
-      <div className="ms-5 me-5">
+    <div className="ms-5 me-5" style={{ color: "black" }}>
+      <div className="ms-5 me-5 mt-5">
         <div className="fw-bold">Applicant must answer each question.</div>
         <div className="d-flex">
           <div className="fw-bold">1.</div>
@@ -40,8 +51,8 @@ const ReviewSubmit = () => {
                   className="form-control"
                   // placeholder="Select an item"
                   // aria-label="Select an item"
-                  value={selectedItem}
-                  onChange={(event) => setSelectedItem(event.target.value)}
+                  value={selectedItem1}
+                  onChange={(event) => setSelectedItem1(event.target.value)}
                 />
                 <button
                   className="btn btn-outline-secondary dropdown-toggle"
@@ -54,7 +65,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="yes/No"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange1}
                     >
                       Yes/No
                     </button>
@@ -63,7 +74,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="Numbers"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange1}
                     >
                       Numbers
                     </button>
@@ -72,7 +83,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="One line"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange1}
                     >
                       One line
                     </button>
@@ -137,8 +148,8 @@ const ReviewSubmit = () => {
                   className="form-control"
                   // placeholder="Select an item"
                   // aria-label="Select an item"
-                  value={selectedItem}
-                  onChange={(event) => setSelectedItem(event.target.value)}
+                  value={selectedItem2}
+                  onChange={(event) => setSelectedItem2(event.target.value)}
                 />
                 <button
                   className="btn btn-outline-secondary dropdown-toggle"
@@ -151,7 +162,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="yes/No"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Yes/No
                     </button>
@@ -160,7 +171,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="Numbers"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Numbers
                     </button>
@@ -169,7 +180,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="One line"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       One line
                     </button>
@@ -233,8 +244,8 @@ const ReviewSubmit = () => {
                   className="form-control"
                   // placeholder="Select an item"
                   // aria-label="Select an item"
-                  value={selectedItem}
-                  onChange={(event) => setSelectedItem(event.target.value)}
+                  value={selectedItem3}
+                  onChange={(event) => setSelectedItem3(event.target.value)}
                 />
                 <button
                   className="btn btn-outline-secondary dropdown-toggle"
@@ -247,7 +258,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="yes/No"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange3}
                     >
                       Yes/No
                     </button>
@@ -256,7 +267,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="Numbers"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange3}
                     >
                       Numbers
                     </button>
@@ -265,7 +276,7 @@ const ReviewSubmit = () => {
                     <button
                       className="dropdown-item"
                       value="One line"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange3}
                     >
                       One line
                     </button>
@@ -304,4 +315,4 @@ const ReviewSubmit = () => {
   );
 };
 
-export default ReviewSubmit;
+export default Screening;

@@ -6,6 +6,7 @@ import "../dropdown/logindropdown.css";
 
 const LoginRegister = () => {
   const [PasswordInputType, ToggleIcon] = PasswordToggle();
+
   return (
     <Container className="containers" fluid>
       <Row className="rows">
@@ -43,7 +44,7 @@ const LoginRegister = () => {
                 style={{ marginRight: "15px" }}
               >
                 <Form.Label>Password:</Form.Label>
-                <div className="col">
+                <div className="">
                   <Form.Control
                     type={PasswordInputType}
                     placeholder="Password"
@@ -59,10 +60,11 @@ const LoginRegister = () => {
               >
                 <Form.Label>Confirm Password:</Form.Label>
                 <Form.Control
-                  type="password"
+                  type={PasswordInputType}
                   placeholder="Confirm Password"
                   style={{ width: "350px" }}
                 />
+                <div className="password-toggle-icon">{ToggleIcon}</div>
               </Form.Group>
             </div>
             <Form className="d-flex mb-4">

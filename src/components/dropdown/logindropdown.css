@@ -1,10 +1,10 @@
 .dropdown-menu {
   --bs-dropdown-zindex: 5000;
 }
-
+/* 
 .password-dropdown {
   top: 375px;
   right: 540px;
   z-index: 1000;
   cursor: pointer;
-}
+} */

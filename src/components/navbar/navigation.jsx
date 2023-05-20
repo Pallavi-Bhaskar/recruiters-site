@@ -1,7 +1,6 @@
 import React from "react";
 
 import Sidebar from "./tabsidebar";
-import Login from "../dropdown/logindropdown";
 
 import { Link } from "react-router-dom";
 import "./navbar.css";
@@ -69,17 +68,6 @@ const Navigation = () => {
           <div className="d-lg-none">
             <Sidebar />
           </div>
-          {/* <button
-            className="navbar-toggler "
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          > */}
-
-          {/* </button> */}
         </div>
       </nav>
     </div>

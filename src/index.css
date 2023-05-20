@@ -89,3 +89,7 @@ body {
 .mypage {
   overflow: hidden;
 }
+
+.custom-bg:hover {
+  background-color: white;
+}

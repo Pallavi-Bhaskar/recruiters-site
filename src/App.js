@@ -29,6 +29,9 @@ import AddDetails from "./components/employer/AddJob/addDetails";
 import ReviewSubmit from "./components/employer/AddJob/reviewSubmit";
 import Screening from "./components/employer/AddJob/screening";
 import PayoutDetails from "./components/employer/AddJob/payoutDetails";
+import CompanyDetails from "./components/employer/Settings/companyDetails";
+import ContactDetails from "./components/employer/Settings/contactDetails";
+import SecurityPrivacy from "./components/employer/Settings/securityPrivacy";
 function App() {
   return (
     <div>
@@ -42,20 +45,14 @@ function App() {
         <Route path="/browsecandidates" element={<BrowseCandidates />} />
         <Route path="/mobileregister" element={<MobileRegister />} />
         <Route path="/mobilelogin" element={<MobileLogin />} />
-      </Routes>
-      <Dropdown /> */}
+      </Routes> */}
+      {/* <Dropdown /> */}
       {/* <Mobiles /> */}
       {/* <PasswordInput /> */}
       <Employer />
-      <About />
-      <Contact />
-      <LegalInformation />
-      <Offices />
-      <PostJob />
-      <AddDetails />
-      <ReviewSubmit />
-      <Screening />
-      <PayoutDetails />
+      {/* <CompanyDetails />
+      <ContactDetails />
+      <SecurityPrivacy /> */}
     </div>
   );
 }

@@ -7,8 +7,8 @@ const Legalinformation = () => {
     setSelectedItem(event.target.value);
   };
   return (
-    <div className="ms-5 me-5">
-      <div className="ms-5 me-5">
+    <div className="ms-5 me-5 " style={{ color: "black" }}>
+      <div className="ms-5 me-5 mt-5">
         <div className="row ">
           <div className="mb-3 col-sm-6">
             <label for="exampleFormControlInput1" className="form-label">

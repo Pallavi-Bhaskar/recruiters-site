@@ -311,34 +311,127 @@
 
 // export default mobiles;
 
+// import React, { useState } from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
+// function PasswordInput() {
+//   const [password, setPassword] = useState("");
+//   const [showPassword, setShowPassword] = useState(false);
+
+//   const togglePassword = () => {
+//     setShowPassword(!showPassword);
+//   };
+
+//   return (
+//     <div className="input-group mb-3">
+//       <input
+//         type={showPassword ? "text" : "password"}
+//         className="form-control"
+//         placeholder="Password"
+//         value={password}
+//         onChange={(e) => setPassword(e.target.value)}
+//       />
+//       <div className="input-group-append">
+//         <span className="input-group-text" onClick={togglePassword}>
+//           <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
+//         </span>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default PasswordInput;
+// import React, { useState } from "react";
+
+// function MyComponent() {
+//   const [count, setCount] = useState(0);
+
+//   const handleClick = () => {
+//     setCount(count + 1);
+//   };
+
+//   return (
+//     <div>
+//       <p>Click count: {count}</p>
+//       <a href="#" onClick={handleClick}>
+//         Click me
+//       </a>
+//     </div>
+//   );
+// }
+// export default MyComponent;
+
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-function PasswordInput() {
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+const Navbar = ({ activeNavItem, onNavItemClick }) => {
+  const navItems = ["About", "Contact", "Information"];
 
-  const togglePassword = () => {
-    setShowPassword(!showPassword);
+  return (
+    <nav>
+      <ul>
+        {navItems.map((item, index) => (
+          <li
+            key={index}
+            className={activeNavItem === index ? "active" : ""}
+            onClick={() => onNavItemClick(index)}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+const AboutComponent = () => {
+  return <div>About Component</div>;
+};
+
+const ContactComponent = () => {
+  return <div>Contact Component</div>;
+};
+
+const InformationComponent = () => {
+  return <div>Information Component</div>;
+};
+
+const App = () => {
+  const [activeButton, setActiveButton] = useState(null);
+  const [activeNavItem, setActiveNavItem] = useState(null);
+
+  const handleButtonClick = (buttonIndex) => {
+    setActiveButton(buttonIndex);
+    setActiveNavItem(null); // Reset active nav item when a different button is clicked
+  };
+
+  const handleNavItemClick = (navItemIndex) => {
+    setActiveNavItem(navItemIndex);
   };
 
   return (
-    <div className="input-group mb-3">
-      <input
-        type={showPassword ? "text" : "password"}
-        className="form-control"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <div className="input-group-append">
-        <span className="input-group-text" onClick={togglePassword}>
-          <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
-        </span>
+    <div>
+      <div>
+        <button onClick={() => handleButtonClick(0)}>Button 1</button>
+        <button onClick={() => handleButtonClick(1)}>Button 2</button>
+        <button onClick={() => handleButtonClick(2)}>Button 3</button>
+        {/* Add more buttons here as needed */}
       </div>
+
+      {activeButton !== null && (
+        <div>
+          <Navbar
+            activeNavItem={activeNavItem}
+            onNavItemClick={handleNavItemClick}
+          />
+
+          {activeNavItem === 0 && <AboutComponent />}
+          {activeNavItem === 1 && <ContactComponent />}
+          {activeNavItem === 2 && <InformationComponent />}
+        </div>
+      )}
     </div>
   );
-}
+};
 
-export default PasswordInput;
+export default App;

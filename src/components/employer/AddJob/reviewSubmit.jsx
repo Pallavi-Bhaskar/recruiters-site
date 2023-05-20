@@ -1,8 +1,8 @@
 import React from "react";
 
-const screening = () => {
+const reviewSubmit = () => {
   return (
-    <div className="ms-5 me-5">
+    <div className="ms-5 me-5" style={{ color: "black" }}>
       <div className="ms-5 me-5 mt-5">
         <div>
           <div className="fw-bold ms-4">Job Title</div>
@@ -46,4 +46,4 @@ const screening = () => {
   );
 };
 
-export default screening;
+export default reviewSubmit;

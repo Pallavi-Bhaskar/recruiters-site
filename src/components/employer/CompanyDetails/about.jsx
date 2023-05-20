@@ -4,8 +4,8 @@ import EmployersNav from "../employernav";
 const about = () => {
   return (
     <div>
-      <div className="ms-5 me-5">
-        <div className="ms-5 me-5">
+      <div className="ms-5 me-5" style={{ color: "black" }}>
+        <div className="ms-5 me-5 mt-5">
           <div className="mb-3">
             <label for="exampleFormControlInput1" className="form-label">
               Company Name:

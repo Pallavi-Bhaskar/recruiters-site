@@ -7,7 +7,7 @@ const Office = () => {
     setSelectedItem(event.target.value);
   };
   return (
-    <div className="ms-5 me-5">
+    <div className="ms-5 me-5" style={{ color: "black" }}>
       <div className="ms-5 me-5 mt-5">
         <div className="mb-3">
           <label for="exampleFormControlInput1" className="form-label">

@@ -2,15 +2,20 @@ import React, { useState } from "react";
 // import "./office.css";
 
 const Offices = () => {
-  const [selectedItem, setSelectedItem] = useState("");
+  const [selectedItem1, setSelectedItem1] = useState("");
 
-  const handleDropdownChange = (event) => {
-    setSelectedItem(event.target.value);
+  const handleDropdownChange1 = (event) => {
+    setSelectedItem1(event.target.value);
+  };
+  const [selectedItem2, setSelectedItem2] = useState("");
+
+  const handleDropdownChange2 = (event) => {
+    setSelectedItem2(event.target.value);
   };
   return (
-    <div className="ms-5 me-5">
-      <div className="ms-5 me-5">
-        <div className="ms-5 me-5">
+    <div className="ms-5 me-5" style={{ color: "black" }}>
+      <div className="ms-5 me-5 ">
+        <div className="ms-5 me-5 mt-5">
           <div className="mb-3">
             <label for="exampleFormControlInput1" className="form-label">
               Job Title:
@@ -37,8 +42,8 @@ const Offices = () => {
                   className="form-control"
                   // placeholder="Select an item"
                   // aria-label="Select an item"
-                  value={selectedItem}
-                  onChange={(event) => setSelectedItem(event.target.value)}
+                  value={selectedItem1}
+                  onChange={(event) => setSelectedItem1(event.target.value)}
                 />
                 <button
                   className="btn btn-outline-secondary dropdown-toggle"
@@ -51,7 +56,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="On-site"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange1}
                     >
                       On-site
                     </button>
@@ -60,7 +65,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Hybrid"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange1}
                     >
                       Hybrid
                     </button>
@@ -69,7 +74,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Remote"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange1}
                     >
                       Remote
                     </button>
@@ -114,8 +119,8 @@ const Offices = () => {
                   className="form-control"
                   // placeholder="Select an item"
                   // aria-label="Select an item"
-                  value={selectedItem}
-                  onChange={(event) => setSelectedItem(event.target.value)}
+                  value={selectedItem2}
+                  onChange={(event) => setSelectedItem2(event.target.value)}
                 />
                 <button
                   className="btn btn-outline-secondary dropdown-toggle"
@@ -128,7 +133,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Full time"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Full time
                     </button>
@@ -137,7 +142,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Part time"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Part time
                     </button>
@@ -146,7 +151,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Contract"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Contract
                     </button>
@@ -155,7 +160,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Temporary"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Temporary
                     </button>
@@ -164,7 +169,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Volunteer"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Volunteer
                     </button>
@@ -173,7 +178,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Internship"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Internship
                     </button>
@@ -182,7 +187,7 @@ const Offices = () => {
                     <button
                       className="dropdown-item"
                       value="Other"
-                      onClick={handleDropdownChange}
+                      onClick={handleDropdownChange2}
                     >
                       Other
                     </button>
