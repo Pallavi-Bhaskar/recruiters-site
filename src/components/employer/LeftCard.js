@@ -80,7 +80,7 @@ const Employer = ({ buttonIndex, buttonText, onButtonClick }) => {
           <div
             className="card shadow"
             style={{
-              height: "100%",
+              // height: "100%",
               background: "#F2F2F2",
               border: "none",
               marginLeft: "90px",
@@ -246,7 +246,7 @@ const Employer = ({ buttonIndex, buttonText, onButtonClick }) => {
           <div
             className="card shadow card2"
             style={{
-              height: "100%",
+              height: "60%",
               background: "#F2F2F2",
               color: "#008b8b",
               border: "none",

@@ -10,7 +10,7 @@ const PayoutDetails = () => {
     <div className="ms-5 me-5" style={{ color: "black" }}>
       <div className="ms-5 me-5 mt-5">
         <div className="row">
-          <div className="mb-3 col-sm-5">
+          <div className="mb-5 col-sm-5">
             <label for="exampleFormControlInput1" className="form-label">
               No.of vacancies:
             </label>
@@ -20,7 +20,7 @@ const PayoutDetails = () => {
               id="exampleFormControlInput1"
             />
           </div>
-          <div className="mb-3 col-sm-5">
+          <div className="mb-5 col-sm-5">
             <label for="exampleFormControlInput1" className="form-label">
               No. of Application required:
             </label>
@@ -32,7 +32,7 @@ const PayoutDetails = () => {
           </div>
         </div>
         <div className="row">
-          <div className="mb-3 col-sm-10">
+          <div className="mb-5 col-sm-10">
             <label for="exampleFormControlInput1" className="form-label">
               Annual CTC range:
             </label>
@@ -45,7 +45,7 @@ const PayoutDetails = () => {
           </div>
         </div>
         <div className="row">
-          <div className="mb-3 col-sm-5">
+          <div className="mb-5 col-sm-5">
             <label for="exampleFormControlInput1" className="form-label">
               Maximum Budget:
             </label>
@@ -55,7 +55,7 @@ const PayoutDetails = () => {
               id="exampleFormControlInput1"
             />
           </div>
-          <div className="mb-3 col-sm-5">
+          <div className="mb-5 col-sm-5">
             <label for="exampleFormControlInput1" className="form-label">
               Minimum CTC:
             </label>
@@ -67,8 +67,8 @@ const PayoutDetails = () => {
           </div>
         </div>
         <div>
-          <div>Fullfillment Payout:</div>
-          <div className="form-check form-check-inline ">
+          <div className="mb-3">Fullfillment Payout:</div>
+          <div className="form-check form-check-inline mb-2">
             <input
               className="form-check-input"
               type="radio"
@@ -80,7 +80,7 @@ const PayoutDetails = () => {
               Percentage
             </label>
           </div>
-          <div className="form-check form-check-inline ms-4">
+          <div className="form-check form-check-inline ms-4 mb-3">
             <input
               className="form-check-input"
               type="radio"
@@ -93,7 +93,7 @@ const PayoutDetails = () => {
             </label>
           </div>
         </div>
-        <div className="mb-3 col-sm-10">
+        <div className="mt-2 col-sm-10">
           <input
             type="text"
             className="form-control"

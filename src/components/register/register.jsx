@@ -1,11 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./register.css";
-import PasswordToggle from "../dropdown/password";
-import "../dropdown/logindropdown.css";
 
 const LoginRegister = () => {
-  const [PasswordInputType, ToggleIcon] = PasswordToggle();
+  // const [PasswordInputType, ToggleIcon] = PasswordToggle();
 
   return (
     <Container className="containers" fluid>
@@ -46,11 +44,11 @@ const LoginRegister = () => {
                 <Form.Label>Password:</Form.Label>
                 <div className="">
                   <Form.Control
-                    type={PasswordInputType}
+                    // type={PasswordInputType}
                     placeholder="Password"
                     style={{ width: "350px" }}
                   />
-                  <div className="password-toggle-icon">{ToggleIcon}</div>
+                  {/* <div className="password-toggle-icon">{ToggleIcon}</div> */}
                 </div>
               </Form.Group>
 
@@ -60,11 +58,11 @@ const LoginRegister = () => {
               >
                 <Form.Label>Confirm Password:</Form.Label>
                 <Form.Control
-                  type={PasswordInputType}
+                  // type={PasswordInputType}
                   placeholder="Confirm Password"
                   style={{ width: "350px" }}
                 />
-                <div className="password-toggle-icon">{ToggleIcon}</div>
+                {/* <div className="password-toggle-icon">{ToggleIcon}</div> */}
               </Form.Group>
             </div>
             <Form className="d-flex mb-4">

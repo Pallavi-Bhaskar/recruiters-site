@@ -11,6 +11,7 @@ const changePassword = () => {
               <h5>Enter New Password:</h5>
               <h5>Confirm New Password:</h5>
             </div>
+            <div className="col-6  py-3 d-flex"></div>
           </div>
         </div>
       </div>

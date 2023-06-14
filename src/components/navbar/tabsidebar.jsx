@@ -4,9 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Col, Row } from "react-bootstrap";
 
-import Login from "../dropdown/logindropdown";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 

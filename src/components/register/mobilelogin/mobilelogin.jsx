@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import Navigation from "../../navbar/navigation";
 import { Link } from "react-router-dom";
-import "./mobilelogin.css";
 
 const mobilelogin = () => {
   return (

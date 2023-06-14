@@ -3,7 +3,7 @@ import React from "react";
 import Sidebar from "./tabsidebar";
 
 import { Link } from "react-router-dom";
-import "./navbar.css";
+
 import Dropdown from "../dropdown/dropdown";
 
 const Navigation = () => {

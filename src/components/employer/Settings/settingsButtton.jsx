@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CompanyDetails from "./companyDetails";
 import ContactDetails from "./contactDetails";
+import SecurityPrivacy from "./securityPrivacy";
 
 const SettingsButtton = () => {
   const [pageDiv, setPage] = useState(null);
@@ -17,22 +18,28 @@ const SettingsButtton = () => {
           </a>
         </li>
         <li className="nav-item " onClick={() => handleClick("companyDetails")}>
-          <a className="nav-link ms-2 ">Company Details</a>
+          <a className="nav-link ms-2 " href="#">
+            Company Details
+          </a>
         </li>
-        <li className="nav-item " onClick={() => handleClick("companyDetails")}>
+        <li className="nav-item " onClick={() => handleClick("contactDetails")}>
           <a className="nav-link ms-2 " href="#">
             Contact Details
           </a>
         </li>
-        <li className="nav-item ">
+        <li
+          className="nav-item "
+          onClick={() => handleClick("securityPrivacy")}
+        >
           <a className="nav-link ms-2 " href="#">
             Security and Privacy
           </a>
         </li>
       </ul>
       <div>
-        {pageDiv === "companydetails" ? <CompanyDetails /> : ""}
+        {pageDiv === "companyDetails" ? <CompanyDetails /> : ""}
         {pageDiv === "contactDetails" ? <ContactDetails /> : ""}
+        {pageDiv === "securityPrivacy" ? <SecurityPrivacy /> : ""}
       </div>
     </div>
   );

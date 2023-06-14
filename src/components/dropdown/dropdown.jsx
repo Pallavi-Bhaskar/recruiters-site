@@ -1,11 +1,9 @@
 import React from "react";
 import { Button, Form, Dropdown } from "react-bootstrap";
-import "./logindropdown.css";
+
 import { FaLock } from "react-icons/fa";
-import passwordToggle from "./password";
 
 const dropdown = () => {
-  const [PasswordInputType, ToggleIcon] = passwordToggle();
   return (
     // <div className="dropdown ">
     <Dropdown>
@@ -35,8 +33,7 @@ const dropdown = () => {
 
           <Form.Group controlId="formBasicPassword" className="mt-1 ms-3 me-3">
             <Form.Label>Password:</Form.Label>
-            <Form.Control type={PasswordInputType} placeholder="Password" />
-            <span>{ToggleIcon}</span>
+            <Form.Control placeholder="Password" />
           </Form.Group>
           <div className="d-flex mt-3 ms-3 me-3">
             <Form>
